@@ -10,7 +10,12 @@ const [user, setUser] = useState([]);
             setUser(result.data.users)
         })
         .catch(err=>{console.log(err)})
-    }, []);
+    })
+    const deleteUser=(id)=>{
+      axios.delete(`https://backendmern-ms25.onrender.com/api/user/delete/${id}`)
+      .then(result=>{console.log("user deleted")})
+      .catch(err=>{console.log(err)})
+    }
     
         
           
@@ -18,6 +23,7 @@ const [user, setUser] = useState([]);
     <div>
       <h1>User</h1>
        <Link to = "/create">Create User</Link>
+       
       <table>
         <tr>
             <th>Name</th>
@@ -32,7 +38,8 @@ const [user, setUser] = useState([]);
                 <td>{users.address}</td>
                 <td>
                     <Link to = '/update'>update</Link>
-                    <button>delete</button>
+                  
+                    <button onclick={()=>deleteUser(users._id)}>delete</button>
                 </td>
             </tr>
         ))}
