@@ -5,7 +5,7 @@ import './User.css'
 const User = () => { 
 const [user, setUser] = useState([]);
     useEffect (() => {
-        axios.get('https://backendmern-ms25.onrender.com/api/user/fetch')
+        axios.get("https://backendmern-ms25.onrender.com/api/user/fetch")
          .then(result => {
             setUser(result.data.users)
         })
@@ -37,9 +37,9 @@ const [user, setUser] = useState([]);
                 <td>{users.email}</td>
                 <td>{users.address}</td>
                 <td>
-                    <Link to = '/update'>update</Link>
+                    <Link to = {`/update/${users._id}`}>Update</Link>
                   
-                    <button onClick={()=>deleteUser(users._id)}>delete</button>
+                    <button onClick={()=>deleteUser(users._id)}>Delete</button>
                 </td>
             </tr>
         ))}

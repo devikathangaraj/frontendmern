@@ -1,10 +1,10 @@
 import react from 'react';
 import axios from 'axios';
 const UpdateUser = () => { 
-    // const {id}= useParams(); 
-    // const [name, setName] = useState();
-    // const [email, setEmail] = useState();
-    // const [address, setAddress] = useState();
+    const {id}= useParams(); 
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [address, setAddress] = useState();
     // const updateuser  =(e) => {
     //     e.preventDefault();
     //     axios.put(``,{name,email,address})
