@@ -39,7 +39,7 @@ const [user, setUser] = useState([]);
                 <td>
                     <Link to = '/update'>update</Link>
                   
-                    <button onclick={()=>deleteUser(users._id)}>delete</button>
+                    <button onClick={()=>deleteUser(users._id)}>delete</button>
                 </td>
             </tr>
         ))}
