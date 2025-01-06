@@ -1,0 +1,17 @@
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin:20px 0;
+}
+th,td{
+    border:1px solid #1a0a0a ;
+    padding: 8px;
+    text-align: center
+}
+th{
+    background-color: blanchedalmond;
+}
+
+tr:hover{
+    background-color: aqua;
+}
